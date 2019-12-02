@@ -15,5 +15,7 @@ namespace MusicStore1.Models
         public string Title { get; set; }
 
         public virtual Artist Artist{ get; set; }
+
+        public virtual List<Reviewer> Reviewers { get; set; }
     }
 }
