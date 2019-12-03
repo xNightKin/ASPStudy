@@ -22,6 +22,7 @@ namespace MusicStore1.Models
                 Artist = context.Artists.Add(new Artist() { Name = "Second Artist" })
             });
 
+            context.Artists.Add(new SoloArtist() { Name = "First Solo Artist", Instrument = "Guitar" });
             
             context.SaveChanges();
         }

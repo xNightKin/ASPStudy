@@ -12,5 +12,10 @@ namespace MusicStore1.Models.Repository
         {
             return DBSet.Where(a => a.Name.Contains(name)).ToList();
         }
+
+        public List<SoloArtist> GetSoloArtists()
+        {
+            return DBSet.OfType<SoloArtist>().ToList();
+        }
     }
 }
