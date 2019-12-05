@@ -15,6 +15,12 @@ namespace MusicStore1.Models
         public string Name { get; set; }
 
         public int ArtistID { get; set; }
+
+        //[Timestamp()]
+        //public byte[] RowVersion { get; set; }
+
+        [ConcurrencyCheck()]
+        public int Version { get; set; }
         public virtual List<Album> Album{ get; set; }
 
         public virtual ArtistDetail ArtistDetail { get; set; }

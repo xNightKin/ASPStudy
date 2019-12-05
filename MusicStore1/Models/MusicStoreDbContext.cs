@@ -13,5 +13,6 @@ namespace MusicStore1.Models
 
         public DbSet<Album> Albums { get; set; }
 
+        public System.Data.Entity.DbSet<MusicStore1.Models.ArtistDetail> ArtistDetails { get; set; }
     }
 }
