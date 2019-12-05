@@ -17,5 +17,14 @@ namespace MusicStore1.Models.Repository
         {
             return DBSet.OfType<SoloArtist>().ToList();
         }
+
+        public override void Update(Artist entity)
+        {
+            base.Update(entity);
+            SaveChanges();
+            entity.Version++;
+            base.Update(entity);
+            SaveChanges();
+        }
     }
 }
